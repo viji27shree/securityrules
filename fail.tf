@@ -45,5 +45,6 @@ resource "azurerm_key_vault_secret" "example" {
     Environment = "Dev"
     Owner       = "SecurityTeam"
     CostCenter  = "CC-1001"
+    Reason      = "Testing Key Vault expiration policy"
   }
 }
