@@ -18,7 +18,7 @@ resource "azurerm_key_vault" "example" {
   soft_delete_retention_days = 7
 }
 
-
+# ✅ Has expiration_date → Should PASS
 resource "azurerm_key_vault_secret" "example" {
   name            = "secret-sauce"
   value           = "szechuan"

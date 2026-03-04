@@ -36,7 +36,7 @@ resource "azurerm_key_vault" "example" {
   }
 }
 
-
+# ❌ No expiration_date → Should FAIL
 resource "azurerm_key_vault_secret" "example" {
   name         = "secret-sauce"
   value        = "szechuan"
