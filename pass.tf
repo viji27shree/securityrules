@@ -1,3 +1,4 @@
+/*
 provider "azurerm" {
   features {
     key_vault {
@@ -63,4 +64,4 @@ resource "azurerm_key_vault_secret" "example" {
     CostCenter  = "CC-1001"
     Reason      = "Testing Key Vault expiration policy"
   }
-}
+}*/
