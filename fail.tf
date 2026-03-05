@@ -1,10 +1,5 @@
 provider "azurerm" {
-  features {
-    key_vault {
-      purge_soft_deleted_secrets_on_destroy = true
-      recover_soft_deleted_secrets          = true
-    }
-  }
+  features {}
 }
 
 data "azurerm_client_config" "current" {}
@@ -36,11 +31,12 @@ resource "azurerm_key_vault" "example" {
   }
 }
 
-# ❌ No expiration_date → Should FAIL
+# FAIL CASE
 resource "azurerm_key_vault_secret" "example" {
   name         = "secret-sauce"
   value        = "szechuan"
   key_vault_id = azurerm_key_vault.example.id
+
   tags = {
     Environment = "Dev"
     Owner       = "SecurityTeam"
