@@ -1,4 +1,4 @@
-# FAIL 1 - validity_in_months exceeds allowed limit (25 months > MAX_CERT_VALIDITY_MONTHS)
+#FAIL 1 - validity_in_months exceeds allowed limit (25 months > MAX_CERT_VALIDITY_MONTHS)
 resource "azurerm_key_vault_certificate" "fail_exceeds_limit" {
   name         = "kv-cert-fail-exceeds"
   key_vault_id = "/subscriptions/00000000/resourceGroups/rg-example/providers/Microsoft.KeyVault/vaults/kv-example"

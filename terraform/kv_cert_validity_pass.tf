@@ -1,4 +1,4 @@
-# PASS - certificate validity within allowed limit (12 months)
+#PASS - certificate validity within allowed limit (12 months)
 resource "azurerm_key_vault_certificate" "pass" {
   name         = "kv-cert-pass"
   key_vault_id = "/subscriptions/00000000/resourceGroups/rg-example/providers/Microsoft.KeyVault/vaults/kv-example"
