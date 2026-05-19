@@ -1,3 +1,4 @@
+#dev
 resource "azurerm_service_plan" "plan_free" {
   name                = "plan-free"
   location            = "East US"
