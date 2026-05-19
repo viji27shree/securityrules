@@ -1,5 +1,4 @@
 
-
 resource "azurerm_resource_group" "rg" {
   name     = "rg-sql-pass"
   location = "East US"
