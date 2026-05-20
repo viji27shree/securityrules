@@ -1,3 +1,4 @@
+#vm
 provider "azurerm" {
 features {}
 }
