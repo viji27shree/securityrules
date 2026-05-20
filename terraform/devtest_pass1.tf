@@ -4,7 +4,7 @@ resource "azurerm_service_plan" "plan_basic" {
   location            = "East US"
   resource_group_name = "rg-dev"
   os_type             = "Windows"
-  sku_name            = "B1"
+  sku_name            = "b1"
 }
 
 resource "azurerm_windows_web_app" "webapp_dev_ok" {
