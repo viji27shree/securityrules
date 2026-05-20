@@ -44,8 +44,6 @@ network_interface_ids = [
 azurerm_network_interface.example.id
 ]
 
-patch_mode = "ImageDefault"
-
 disable_password_authentication = true
 
 admin_ssh_key {
