@@ -1,4 +1,4 @@
-#vmt
+
 provider "azurerm" {
 features {}
 }
