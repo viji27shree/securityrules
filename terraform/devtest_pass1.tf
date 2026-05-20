@@ -1,4 +1,4 @@
-#dev
+#
 resource "azurerm_service_plan" "plan_basic" {
   name                = "plan-basic"
   location            = "East US"
