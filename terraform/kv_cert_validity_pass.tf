@@ -1,25 +1,7 @@
-provider "azurerm" {
-  features {}
-}
-
-resource "azurerm_resource_group" "example" {
-  name     = "kv-cert-pass-rg"
-  location = "East US"
-}
-
-resource "azurerm_key_vault" "example" {
-  name                        = "kvcertpass123"
-  location                    = azurerm_resource_group.example.location
-  resource_group_name         = azurerm_resource_group.example.name
-  tenant_id                   = "11111111-1111-1111-1111-111111111111"
-  sku_name                    = "standard"
-  purge_protection_enabled    = true
-  soft_delete_retention_days  = 7
-}
-
-resource "azurerm_key_vault_certificate" "example" {
-  name         = "pass-cert"
-  key_vault_id = azurerm_key_vault.example.id
+#PASS - certificate validity within allowed limit (12 months)
+resource "azurerm_key_vault_certificate" "pass" {
+  name         = "kv-cert-pass"
+  key_vault_id = "/subscriptions/00000000/resourceGroups/rg-example/providers/Microsoft.KeyVault/vaults/kv-example"
 
   certificate_policy {
     issuer_parameters {
@@ -39,7 +21,16 @@ resource "azurerm_key_vault_certificate" "example" {
 
     x509_certificate_properties {
       validity_in_months = 12
-      subject            = "CN=example.com"
+    }
+
+    lifetime_action {
+      action {
+        action_type = "AutoRenew"
+      }
+      trigger {
+        days_before_expiry = 30
+      }
+      validity_in_months = 12
     }
   }
 }
