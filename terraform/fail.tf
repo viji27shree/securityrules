@@ -1,4 +1,10 @@
-
-resource "azurerm_subscription" "current" {
-  subscription_id = "00000000-0000-0000-0000-000000000000"
+provider "azurerm" {
+  features {}
 }
+
+resource "azurerm_resource_group" "rg" {
+  name     = "rg-test"
+  location = "East US"
+}
+
+# ❌ No azurerm_key_vault present
