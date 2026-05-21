@@ -3,7 +3,7 @@ resource "azurerm_service_plan" "shared_plan" {
   location            = "East US"
   resource_group_name = "rg-test"
   os_type             = "Windows"
-  sku_name            = "D1"
+  sku_name            = "d1"
 }
 
 resource "azurerm_windows_web_app" "shared_app" {

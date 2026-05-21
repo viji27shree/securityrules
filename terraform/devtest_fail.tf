@@ -3,7 +3,7 @@ resource "azurerm_service_plan" "bad_plan" {
   location            = "East US"
   resource_group_name = "rg-test"
   os_type             = "Linux"
-  sku_name            = "F1"
+  sku_name            = "f1"
 }
 
 resource "azurerm_linux_web_app" "bad_app" {
