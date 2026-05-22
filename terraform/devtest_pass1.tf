@@ -1,3 +1,4 @@
+
 resource "azurerm_service_plan" "good_plan" {
   name                = "good-service-plan"
   location            = "East US"

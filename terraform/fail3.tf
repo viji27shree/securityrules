@@ -1,4 +1,3 @@
-
 resource "azurerm_service_plan" "shared_plan" {
   name                = "shared-service-plan"
   location            = "East US"

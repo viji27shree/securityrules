@@ -1,4 +1,3 @@
-
 resource "azurerm_service_plan" "bad_plan" {
   name                = "bad-service-plan"
   location            = "East US"
