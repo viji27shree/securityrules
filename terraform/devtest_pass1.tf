@@ -1,17 +1,20 @@
-
-resource "azurerm_service_plan" "good_plan" {
-  name                = "good-service-plan"
+resource "azurerm_service_plan" "dev_plan" {
+  name                = "dev-service-plan"
   location            = "East US"
-  resource_group_name = "rg-test"
-  os_type             = "Linux"
-  sku_name            = "P1v2"
+  resource_group_name = "rg-dev"
+  os_type             = "Windows"
+  sku_name            = "F1"
+
+  tags = {
+    environment = "dev"
+  }
 }
 
-resource "azurerm_linux_web_app" "good_app" {
-  name                = "good-linux-app"
+resource "azurerm_windows_web_app" "dev_app" {
+  name                = "dev-web-app"
   location            = "East US"
-  resource_group_name = "rg-test"
-  service_plan_id     = azurerm_service_plan.good_plan.id
+  resource_group_name = "rg-dev"
+  service_plan_id     = azurerm_service_plan.dev_plan.id
 
   site_config {}
 
