@@ -1,3 +1,4 @@
+#pass
 resource "azurerm_resource_group" "rg" {
   name     = "rg-storage-pass"
   location = "East US"

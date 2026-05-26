@@ -1,8 +1,3 @@
-#fail:
-resource "azurerm_resource_group" "rg" {
-  name     = "rg-storage-fail"
-  location = "East US"
-}
 
 resource "azurerm_storage_account" "fail" {
   name                     = "storagefail12345"
@@ -10,6 +5,4 @@ resource "azurerm_storage_account" "fail" {
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-
-  shared_access_key_enabled = true
 }
