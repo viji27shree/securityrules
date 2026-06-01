@@ -4,8 +4,8 @@ resource "azurerm_mssql_server_vulnerability_assessment" "prod_sql" {
   storage_container_path = "https://storage.blob.core.windows.net/va/"
 
   recurring_scans {
-    enabled                   = false
-    email_subscription_admins = true
-    emails                    = ["security@example.com"]
+    enabled                   = true
+    email_subscription_admins = false
+    emails                    = []
   }
 }
