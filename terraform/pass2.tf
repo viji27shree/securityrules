@@ -1,4 +1,4 @@
-resource "azurerm_linux_function_app" "pass" {
+resource "azurerm_linux_web_app" "pass" {
   name                       = "linux-function-pass"
   location                   = azurerm_resource_group.rg.location
   resource_group_name        = azurerm_resource_group.rg.name
