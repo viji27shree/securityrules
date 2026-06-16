@@ -1,5 +1,5 @@
-resource "azurerm_windows_web_app" "pass_file_system" {
-  name                = "winwebapp-pass-1"
+resource "azurerm_windows_web_app" "fail_flags" {
+  name                = "winwebapp-fail-3"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -8,7 +8,7 @@ resource "azurerm_windows_web_app" "pass_file_system" {
       file_system = true
     }
 
-    detailed_error_messages = true
-    failed_request_tracing   = true
+    detailed_error_messages = false
+    failed_request_tracing   = false
   }
 }
