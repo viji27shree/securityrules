@@ -1,5 +1,5 @@
-resource "azurerm_mysql_flexible_server" "mysql_fail" {
-  name                = "mysql-fail-example"
+resource "azurerm_postgresql_flexible_server" "pg_fail" {
+  name                = "pg-fail-example"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 
@@ -8,9 +8,7 @@ resource "azurerm_mysql_flexible_server" "mysql_fail" {
 
   sku_name = "GP_Standard_D2ds_v4"
 
-  storage {
-    size_gb = 20
-  }
+  storage_mb = 32768
 
-  # ❌ Missing geo_redundant_backup_enabled (defaults to false)
+  geo_redundant_backup_enabled = false   # ❌ FAIL
 }
