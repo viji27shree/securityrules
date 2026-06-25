@@ -1,3 +1,4 @@
+
 resource "azurerm_postgresql_flexible_server" "example" {
   name                = "example-postgres"
   resource_group_name = azurerm_resource_group.example.name

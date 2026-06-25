@@ -1,3 +1,4 @@
+
 resource "azurerm_postgresql_flexible_server" "fail" {
 
   authentication {
