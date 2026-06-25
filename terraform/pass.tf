@@ -1,3 +1,4 @@
+
 resource "azurerm_storage_account" "good" {
   name                     = "storacctgood123"
   resource_group_name      = azurerm_resource_group.example.name
