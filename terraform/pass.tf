@@ -1,3 +1,4 @@
+
 resource "azurerm_cognitive_account" "good" {
   name                = "example-openai"
   location            = azurerm_resource_group.example.location
